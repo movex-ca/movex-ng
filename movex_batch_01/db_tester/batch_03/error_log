@@ -1,0 +1,25 @@
+[07-Mar-2026 19:43:26 UTC] PHP Warning:  require_once(../../../config/db.php): Failed to open stream: No such file or directory in /home/movecdxj/public_html/9ja/movex_batch_01/db_tester/batch_03/get_all_batch_03.php on line 3
+[07-Mar-2026 19:43:26 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../../../config/db.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/movecdxj/public_html/9ja/movex_batch_01/db_tester/batch_03/get_all_batch_03.php:3
+Stack trace:
+#0 {main}
+  thrown in /home/movecdxj/public_html/9ja/movex_batch_01/db_tester/batch_03/get_all_batch_03.php on line 3
+[07-Mar-2026 19:43:31 UTC] PHP Warning:  require_once(../../../config/db.php): Failed to open stream: No such file or directory in /home/movecdxj/public_html/9ja/movex_batch_01/db_tester/batch_03/get_all_batch_03.php on line 3
+[07-Mar-2026 19:43:31 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../../../config/db.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/movecdxj/public_html/9ja/movex_batch_01/db_tester/batch_03/get_all_batch_03.php:3
+Stack trace:
+#0 {main}
+  thrown in /home/movecdxj/public_html/9ja/movex_batch_01/db_tester/batch_03/get_all_batch_03.php on line 3
+[07-Mar-2026 19:44:59 UTC] PHP Warning:  require_once(../../../config/db.php): Failed to open stream: No such file or directory in /home/movecdxj/public_html/9ja/movex_batch_01/db_tester/batch_03/get_all_batch_03.php on line 3
+[07-Mar-2026 19:44:59 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../../../config/db.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/movecdxj/public_html/9ja/movex_batch_01/db_tester/batch_03/get_all_batch_03.php:3
+Stack trace:
+#0 {main}
+  thrown in /home/movecdxj/public_html/9ja/movex_batch_01/db_tester/batch_03/get_all_batch_03.php on line 3
+[07-Mar-2026 19:45:24 UTC] PHP Warning:  require_once(../../../config/db.php): Failed to open stream: No such file or directory in /home/movecdxj/public_html/9ja/movex_batch_01/db_tester/batch_03/get_all_batch_03.php on line 3
+[07-Mar-2026 19:45:24 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../../../config/db.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/movecdxj/public_html/9ja/movex_batch_01/db_tester/batch_03/get_all_batch_03.php:3
+Stack trace:
+#0 {main}
+  thrown in /home/movecdxj/public_html/9ja/movex_batch_01/db_tester/batch_03/get_all_batch_03.php on line 3
+[07-Mar-2026 19:46:01 UTC] PHP Warning:  require_once(../../../config/db.php): Failed to open stream: No such file or directory in /home/movecdxj/public_html/9ja/movex_batch_01/db_tester/batch_03/get_all_batch_03.php on line 3
+[07-Mar-2026 19:46:01 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../../../config/db.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/movecdxj/public_html/9ja/movex_batch_01/db_tester/batch_03/get_all_batch_03.php:3
+Stack trace:
+#0 {main}
+  thrown in /home/movecdxj/public_html/9ja/movex_batch_01/db_tester/batch_03/get_all_batch_03.php on line 3

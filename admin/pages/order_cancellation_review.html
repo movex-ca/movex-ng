@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movex Cancellation Charge Review</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+    body { background: #f4f6fb; color: #1f2937; padding: 24px; }
+    .card {
+      background: #fff; border-radius: 14px; padding: 20px; margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    h1, h2 { margin-bottom: 12px; }
+    .grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px;
+    }
+    input, select, textarea {
+      width: 100%; padding: 11px 12px; border: 1px solid #d1d5db; border-radius: 8px;
+    }
+    textarea { min-height: 100px; }
+    .btn {
+      border: none; padding: 11px 16px; border-radius: 8px; cursor: pointer; font-weight: bold; margin-right: 8px;
+    }
+    .btn-primary { background: #2563eb; color: #fff; }
+    .btn-success { background: #16a34a; color: #fff; }
+    .summary {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px;
+    }
+    .summary .box {
+      background: #eff6ff; padding: 16px; border-radius: 12px;
+    }
+    .value { font-size: 22px; font-weight: bold; margin-top: 6px; }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Order Cancellation / No-Show Review</h1>
+    <div class="grid">
+      <input type="text" placeholder="Order Code" />
+      <input type="text" placeholder="Payment Reference" />
+      <select>
+        <option>Trigger Type</option>
+        <option>Customer Cancel Before Assignment</option>
+        <option>Customer Cancel After Assignment</option>
+        <option>Customer No Show Pickup</option>
+        <option>Receiver No Show Dropoff</option>
+        <option>Missed Schedule</option>
+      </select>
+      <select>
+        <option>Applicable Policy</option>
+        <option>10% Before Assignment</option>
+        <option>20% After Assignment</option>
+        <option>30% No Show Pickup</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="summary">
+    <div class="box">
+      <div>Original Paid Amount</div>
+      <div class="value">₦6,850.00</div>
+    </div>
+    <div class="box">
+      <div>Platform Charge</div>
+      <div class="value">₦1,370.00</div>
+    </div>
+    <div class="box">
+      <div>Wallet Credit Balance</div>
+      <div class="value">₦5,480.00</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Reason / Review Notes</h2>
+    <textarea placeholder="Write reason for cancellation charge, no-show details, and wallet credit explanation"></textarea>
+    <div style="margin-top: 14px;">
+      <button class="btn btn-primary">Approve Charge</button>
+      <button class="btn btn-success">Process Wallet Credit</button>
+    </div>
+  </div>
+
+</body>
+</html>

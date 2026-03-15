@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        FILE: terms.html
+        PURPOSE:
+        Movex Nigeria Terms and Conditions page for all registration categories.
+
+        USER CATEGORIES COVERED:
+        1. Individual Customer / Sender
+        2. Driver / Rider
+        3. Business Logistics Partner
+        4. Company Needing Services
+
+        HTML ONLY:
+        This is a front-end informational page and does not submit any form.
+    -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movex 9ja | Terms and Conditions</title>
+    <link rel="icon" type="image/jpeg" href="assets/images/movex-logo.jpg" />
+    <style>
+        /* =========================================================
+           MOVEX 9JA - TERMS PAGE
+           Mobile-first styling with original lemon background
+           ========================================================= */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        :root {
+            --lemon-1: #fffde7;
+            --lemon-2: #fff9c4;
+            --lemon-3: #fef08a;
+            --white: #ffffff;
+            --text-dark: #374151;
+            --text-mid: #6b7280;
+            --accent: #facc15;
+            --accent-2: #fde047;
+            --accent-deep: #b45309;
+            --border: #e5e7eb;
+            --brand-blue: #081a4b;
+            --shadow: rgba(0, 0, 0, 0.12);
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--lemon-1), var(--lemon-2), var(--lemon-3));
+            padding: 20px;
+            color: var(--text-dark);
+        }
+
+        .page-wrap {
+            width: 100%;
+            max-width: 980px;
+            margin: 0 auto;
+        }
+
+        .page-card {
+            background: rgba(255, 255, 255, 0.96);
+            border-radius: 24px;
+            box-shadow: 0 18px 45px var(--shadow);
+            padding: 32px 22px;
+            border: 1px solid rgba(255, 235, 59, 0.45);
+        }
+
+        .logo-box {
+            text-align: center;
+            margin-bottom: 18px;
+        }
+
+        .logo-box img {
+            width: 90px;
+            height: 90px;
+            object-fit: contain;
+            border-radius: 16px;
+            background: var(--brand-blue);
+            padding: 8px;
+            box-shadow: 0 8px 18px rgba(250, 204, 21, 0.35);
+        }
+
+        .page-title {
+            text-align: center;
+            font-size: 28px;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+
+        .page-subtitle {
+            text-align: center;
+            color: var(--text-mid);
+            font-size: 14px;
+            margin-bottom: 24px;
+            line-height: 1.6;
+        }
+
+        .quick-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 24px;
+            justify-content: center;
+        }
+
+        .quick-links a,
+        .top-nav a {
+            text-decoration: none;
+            color: var(--accent-deep);
+            font-weight: 700;
+        }
+
+        .top-nav {
+            text-align: center;
+            margin-bottom: 22px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .chip {
+            display: inline-block;
+            background: #fffef7;
+            border: 1px solid rgba(250, 204, 21, 0.55);
+            border-radius: 999px;
+            padding: 10px 14px;
+            font-size: 13px;
+        }
+
+        .section {
+            margin-bottom: 28px;
+        }
+
+        .section h2 {
+            font-size: 20px;
+            margin-bottom: 12px;
+            color: var(--text-dark);
+        }
+
+        .section h3 {
+            font-size: 17px;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+
+        .section p {
+            color: var(--text-dark);
+            font-size: 15px;
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+
+        .section ul {
+            padding-left: 18px;
+            margin-bottom: 12px;
+        }
+
+        .section li {
+            margin-bottom: 10px;
+            line-height: 1.8;
+            color: var(--text-dark);
+            font-size: 15px;
+        }
+
+        .note-box {
+            background: #fffef7;
+            border: 1px solid rgba(250, 204, 21, 0.55);
+            border-radius: 16px;
+            padding: 16px;
+            margin-bottom: 24px;
+        }
+
+        .footer-links {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 14px;
+            color: var(--text-mid);
+            line-height: 1.8;
+        }
+
+        @media (min-width: 700px) {
+            .page-card {
+                padding: 38px 34px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-wrap">
+        <div class="page-card">
+            <div class="logo-box">
+                <img src="assets/images/movex-logo.jpg" alt="Movex Logo" />
+            </div>
+
+            <h1 class="page-title">Terms and Conditions</h1>
+            <p class="page-subtitle">
+                These Terms and Conditions govern the use of Movex Nigeria on the demo environment
+                <strong>/9ja</strong> and the live environment <strong>/ng</strong>.
+                By registering or using the platform, you agree to these terms.
+            </p>
+
+            <div class="top-nav">
+                <a href="forms/auth/login.html">Login</a> |
+                <a href="forms/auth/register.html">Register</a> |
+                <a href="privacy.html">Privacy Policy</a>
+            </div>
+
+            <div class="quick-links">
+                <a class="chip" href="#general">General Terms</a>
+                <a class="chip" href="#customer">Customer Terms</a>
+                <a class="chip" href="#driver">Driver Terms</a>
+                <a class="chip" href="#business-partner">Business Partner Terms</a>
+                <a class="chip" href="#company-client">Company Client Terms</a>
+                <a class="chip" href="#insurance">Insurance</a>
+                <a class="chip" href="#approvals">Approvals</a>
+            </div>
+
+            <div class="note-box">
+                <p>
+                    Movex is a logistics coordination and service platform. Depending on the account type,
+                    users may request services, provide transport services, register drivers, or operate
+                    company-managed ordering structures.
+                </p>
+            </div>
+
+            <section class="section" id="general">
+                <h2>1. General Terms</h2>
+                <p>
+                    Movex provides a platform that connects logistics demand with approved service providers,
+                    drivers, riders, partner businesses, and company users. Registration on the platform is
+                    subject to verification, approval, and compliance with platform policies.
+                </p>
+                <ul>
+                    <li>You must provide accurate and truthful registration information.</li>
+                    <li>You are responsible for maintaining the confidentiality of your account credentials.</li>
+                    <li>Movex may suspend, restrict, or terminate any account that violates platform rules or applicable law.</li>
+                    <li>Movex may update categories, pools, services, terms, and operational policies as the platform grows.</li>
+                    <li>Use of the platform in the testing environment does not guarantee immediate production approval or live activation.</li>
+                </ul>
+            </section>
+
+            <section class="section" id="customer">
+                <h2>2. Terms for Individual Customer / Sender</h2>
+                <p>
+                    Individual customers use Movex to request transport, dispatch, delivery, and related services.
+                </p>
+                <ul>
+                    <li>Customers must provide accurate delivery and pickup information when placing orders.</li>
+                    <li>Customers are responsible for ensuring that goods submitted for transport are lawful and properly described.</li>
+                    <li>Customers must not use the platform to transport prohibited, dangerous, or illegal items without lawful authorization.</li>
+                    <li>Movex may delay, reject, or cancel requests that appear unsafe, inaccurate, or non-compliant.</li>
+                    <li>Any student-related promo request is subject to review and admin approval before benefits are applied.</li>
+                </ul>
+            </section>
+
+            <section class="section" id="driver">
+                <h2>3. Terms for Driver / Rider</h2>
+                <p>
+                    Drivers and riders register to offer transport and delivery services through approved Movex pools.
+                </p>
+                <ul>
+                    <li>Driver registration does not automatically mean the driver is approved for work on the platform.</li>
+                    <li>Movex may require identity verification, licence verification, vehicle verification, and other supporting documents before approval.</li>
+                    <li>Drivers may be assigned to service pools such as Dispatch Rider, Truck, Tipper and Granite, Ajeigboro, Petrol Tanker, Frozen Foods, and General Pools.</li>
+                    <li>Drivers who indicate association or motor garage affiliation may still require admin verification and tagging before association benefits are applied.</li>
+                    <li>Movex may suspend driver access if safety, compliance, inactivity, document expiry, misconduct, or operational concerns arise.</li>
+                    <li>Drivers are responsible for obeying road regulations, vehicle laws, and all lawful operating requirements in their area of service.</li>
+                </ul>
+            </section>
+
+            <section class="section" id="business-partner">
+                <h2>4. Terms for Business Logistics Partner</h2>
+                <p>
+                    Business Logistics Partners are companies that carry loads and may register or onboard drivers
+                    under their business relationship with Movex.
+                </p>
+                <ul>
+                    <li>A business partner may register drivers, but final driver approval remains subject to Movex admin review.</li>
+                    <li>Business partners must provide valid business and contact information during registration and verification.</li>
+                    <li>Movex may approve, reject, suspend, or limit business partner accounts based on operational or compliance review.</li>
+                    <li>Commission opportunities for business partners are subject to Movex commercial policy and may depend on approved activities, orders, driver status, and payout rules.</li>
+                    <li>Business partners must not misrepresent driver identity, vehicle status, documents, or service capacity.</li>
+                </ul>
+            </section>
+
+            <section class="section" id="company-client">
+                <h2>5. Terms for Company Needing Services</h2>
+                <p>
+                    Company Client accounts are for organizations that need logistics services for company operations.
+                </p>
+                <ul>
+                    <li>Orders placed through authorized users may be treated as company orders and not personal orders.</li>
+                    <li>The company is responsible for the actions of users it authorizes under its account structure.</li>
+                    <li>Company promos, discounts, or billing arrangements are subject to admin approval and separate commercial terms where applicable.</li>
+                    <li>Movex may request company verification, contact verification, and authorized-user management controls before account activation or scaling.</li>
+                </ul>
+            </section>
+
+            <section class="section" id="insurance">
+                <h2>6. Insurance Terms</h2>
+                <p>
+                    Certain services, categories, goods, or pools may have optional or required insurance options.
+                    Availability of insurance may depend on order type, vehicle class, service pool, goods type,
+                    partner arrangements, and admin settings.
+                </p>
+                <ul>
+                    <li>Insurance may not apply automatically to every order.</li>
+                    <li>Where insurance is optional, users may be required to choose whether to include it during service request or configuration.</li>
+                    <li>Where insurance is mandatory for a pool or order type, Movex may restrict service until insurance requirements are met.</li>
+                </ul>
+            </section>
+
+            <section class="section" id="approvals">
+                <h2>7. Verification, Approval, and Platform Control</h2>
+                <ul>
+                    <li>Movex may apply admin approval to drivers, businesses, associations, student promo requests, company accounts, and other platform entities.</li>
+                    <li>Association and motor garage linkage remains under admin control.</li>
+                    <li>Recognized associations may be issued codes internally, but membership tagging may be performed by admin rather than public self-assignment.</li>
+                    <li>Movex reserves the right to review, approve, reject, or remove affiliation, promo, or operational status where necessary.</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>8. Limitation and Platform Role</h2>
+                <p>
+                    Movex operates as a logistics platform and service coordinator. In some cases, service performance,
+                    delivery conditions, timing, vehicle availability, traffic, weather, fuel issues, mechanical issues,
+                    local restrictions, and third-party conditions may affect operations.
+                </p>
+                <p>
+                    Movex may work with partner businesses, insurers, background or verification providers, and related
+                    service structures as part of platform operations.
+                </p>
+            </section>
+
+            <section class="section">
+                <h2>9. Changes to These Terms</h2>
+                <p>
+                    Movex may update these Terms and Conditions from time to time. Continued use of the platform after
+                    updates means you accept the revised version.
+                </p>
+            </section>
+
+            <section class="section">
+                <h2>10. Contact</h2>
+                <p>
+                    For support, compliance questions, or account-related issues, users should contact the Movex support
+                    channel that will be published on the live platform.
+                </p>
+            </section>
+
+            <div class="footer-links">
+                <a href="forms/auth/register.html">Back to Registration</a> |
+                <a href="forms/auth/login.html">Back to Login</a> |
+                <a href="privacy.html">Privacy Policy</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

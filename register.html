@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movex Nigeria | Register</title>
+    <meta name="description" content="Movex Nigeria registration portal" />
+    <link rel="icon" type="image/jpeg" href="assets/images/movex-logo.jpg" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #fffde7, #fff9c4, #fef08a);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 620px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.96);
+            border-radius: 24px;
+            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
+            padding: 35px 28px;
+            border: 1px solid rgba(255, 235, 59, 0.5);
+        }
+
+        .logo-box {
+            text-align: center;
+            margin-bottom: 18px;
+        }
+
+        .logo-box img {
+            width: 95px;
+            height: 95px;
+            object-fit: contain;
+            border-radius: 16px;
+            background: #081a4b;
+            padding: 8px;
+            box-shadow: 0 8px 20px rgba(250, 204, 21, 0.28);
+        }
+
+        h2 {
+            text-align: center;
+            color: #4b5563;
+            margin-bottom: 8px;
+            font-size: 28px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #6b7280;
+            margin-bottom: 28px;
+            font-size: 14px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .input-group {
+            margin-bottom: 18px;
+        }
+
+        .full-width {
+            grid-column: span 2;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #374151;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .input-box {
+            position: relative;
+        }
+
+        .input-box input,
+        .input-box select,
+        .phone-select,
+        .phone-number {
+            width: 100%;
+            padding: 14px 14px;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            outline: none;
+            font-size: 15px;
+            background: #fffef7;
+            transition: 0.3s ease;
+        }
+
+        .input-box input:focus,
+        .input-box select:focus,
+        .phone-select:focus,
+        .phone-number:focus {
+            border-color: #eab308;
+            box-shadow: 0 0 0 4px rgba(250, 204, 21, 0.18);
+        }
+
+        .password-box input {
+            padding-right: 44px;
+        }
+
+        .toggle-password {
+            position: absolute;
+            right: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            border: none;
+            background: none;
+            cursor: pointer;
+            font-size: 18px;
+            color: #6b7280;
+        }
+
+        .phone-row {
+            display: grid;
+            grid-template-columns: 140px 1fr;
+            gap: 10px;
+        }
+
+        .check-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 18px;
+            color: #4b5563;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .check-group input {
+            margin-top: 3px;
+            accent-color: #eab308;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 14px;
+            background: linear-gradient(135deg, #facc15, #fde047);
+            color: #3f3f46;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.3s ease;
+            box-shadow: 0 10px 20px rgba(250, 204, 21, 0.25);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .bottom-text {
+            text-align: center;
+            margin-top: 22px;
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        a {
+            color: #b45309;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .terms-note {
+            text-align: center;
+            margin-top: 16px;
+            font-size: 13px;
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 600px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .full-width {
+                grid-column: span 1;
+            }
+
+            .phone-row {
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                padding: 28px 20px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            .logo-box img {
+                width: 84px;
+                height: 84px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="logo-box">
+                <img src="assets/images/movex-logo.jpg" alt="Movex Logo" />
+            </div>
+
+            <h2>Create Account</h2>
+            <p class="subtitle">Register for your Movex Nigeria account</p>
+
+            <form action="#" method="post">
+                <div class="grid">
+                    <div class="input-group">
+                        <label for="first_name">First Name</label>
+                        <div class="input-box">
+                            <input type="text" id="first_name" name="first_name" placeholder="First name" required />
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="last_name">Last Name</label>
+                        <div class="input-box">
+                            <input type="text" id="last_name" name="last_name" placeholder="Last name" required />
+                        </div>
+                    </div>
+
+                    <div class="input-group full-width">
+                        <label for="email">Email Address</label>
+                        <div class="input-box">
+                            <input type="email" id="email" name="email" placeholder="Enter your email address" required />
+                        </div>
+                    </div>
+
+                    <div class="input-group full-width">
+                        <label for="telephone">Telephone</label>
+                        <div class="phone-row">
+                            <select name="country_code" class="phone-select" required>
+                                <option value="+234" selected>🇳🇬 +234</option>
+                            </select>
+
+                            <input
+                                type="tel"
+                                id="telephone"
+                                name="telephone"
+                                class="phone-number"
+                                placeholder="8012345678"
+                                pattern="[0-9]{10}"
+                                title="Enter a valid 10 digit Nigerian phone number"
+                                required
+                            />
+                        </div>
+                    </div>
+
+                    <div class="input-group full-width">
+                        <label for="address">Address</label>
+                        <div class="input-box">
+                            <input type="text" id="address" name="address" placeholder="Enter your address" required />
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="state">State of Residence</label>
+                        <div class="input-box">
+                            <select id="state" name="state" required>
+                                <option value="">Select state</option>
+                                <option>Abia</option>
+                                <option>Adamawa</option>
+                                <option>Akwa Ibom</option>
+                                <option>Anambra</option>
+                                <option>Bauchi</option>
+                                <option>Bayelsa</option>
+                                <option>Benue</option>
+                                <option>Borno</option>
+                                <option>Cross River</option>
+                                <option>Delta</option>
+                                <option>Ebonyi</option>
+                                <option>Edo</option>
+                                <option>Ekiti</option>
+                                <option>Enugu</option>
+                                <option>FCT - Abuja</option>
+                                <option>Gombe</option>
+                                <option>Imo</option>
+                                <option>Jigawa</option>
+                                <option>Kaduna</option>
+                                <option>Kano</option>
+                                <option>Katsina</option>
+                                <option>Kebbi</option>
+                                <option>Kogi</option>
+                                <option>Kwara</option>
+                                <option>Lagos</option>
+                                <option>Nasarawa</option>
+                                <option>Niger</option>
+                                <option>Ogun</option>
+                                <option>Ondo</option>
+                                <option>Osun</option>
+                                <option>Oyo</option>
+                                <option>Plateau</option>
+                                <option>Rivers</option>
+                                <option>Sokoto</option>
+                                <option>Taraba</option>
+                                <option>Yobe</option>
+                                <option>Zamfara</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="sex">Sex</label>
+                        <div class="input-box">
+                            <select id="sex" name="sex" required>
+                                <option value="">Select sex</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="prefer_not_to_say">Prefer not to say</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="input-group full-width">
+                        <label for="referral_code">Referral Code</label>
+                        <div class="input-box">
+                            <input type="text" id="referral_code" name="referral_code" placeholder="Enter referral code if any" />
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <div class="input-box password-box">
+                            <input type="password" id="password" name="password" placeholder="Create password" required />
+                            <button type="button" class="toggle-password" onclick="togglePassword('password', this)">👁</button>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="confirm_password">Confirm Password</label>
+                        <div class="input-box password-box">
+                            <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm password" required />
+                            <button type="button" class="toggle-password" onclick="togglePassword('confirm_password', this)">👁</button>
+                        </div>
+                    </div>
+                </div>
+
+                <label class="check-group">
+                    <input type="checkbox" name="remember_me" />
+                    <span>Remember me on this device</span>
+                </label>
+
+                <label class="check-group">
+                    <input type="checkbox" name="agree_terms" required />
+                    <span>
+                        I agree to the
+                        <a href="terms.html">Terms &amp; Conditions</a>
+                    </span>
+                </label>
+
+                <button type="submit" class="btn">Register</button>
+
+                <p class="bottom-text">
+                    Already have an account?
+                    <a href="login.html">Login</a>
+                </p>
+
+                <div class="terms-note">
+                    By registering, you accept our
+                    <a href="terms.html">Terms</a>.
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function togglePassword(fieldId, button) {
+            const input = document.getElementById(fieldId);
+            if (input.type === "password") {
+                input.type = "text";
+                button.textContent = "🙈";
+            } else {
+                input.type = "password";
+                button.textContent = "👁";
+            }
+        }
+    </script>
+</body>
+</html>

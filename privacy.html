@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        FILE: privacy.html
+        PURPOSE:
+        Movex Nigeria Privacy Policy page for all registration categories.
+
+        USER CATEGORIES COVERED:
+        1. Individual Customer / Sender
+        2. Driver / Rider
+        3. Business Logistics Partner
+        4. Company Needing Services
+
+        HTML ONLY:
+        This is a front-end informational page and does not submit any form.
+    -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movex 9ja | Privacy Policy</title>
+    <link rel="icon" type="image/jpeg" href="assets/images/movex-logo.jpg" />
+    <style>
+        /* =========================================================
+           MOVEX 9JA - PRIVACY PAGE
+           Mobile-first styling with original lemon background
+           ========================================================= */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        :root {
+            --lemon-1: #fffde7;
+            --lemon-2: #fff9c4;
+            --lemon-3: #fef08a;
+            --white: #ffffff;
+            --text-dark: #374151;
+            --text-mid: #6b7280;
+            --accent: #facc15;
+            --accent-deep: #b45309;
+            --brand-blue: #081a4b;
+            --shadow: rgba(0, 0, 0, 0.12);
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--lemon-1), var(--lemon-2), var(--lemon-3));
+            padding: 20px;
+            color: var(--text-dark);
+        }
+
+        .page-wrap {
+            width: 100%;
+            max-width: 980px;
+            margin: 0 auto;
+        }
+
+        .page-card {
+            background: rgba(255, 255, 255, 0.96);
+            border-radius: 24px;
+            box-shadow: 0 18px 45px var(--shadow);
+            padding: 32px 22px;
+            border: 1px solid rgba(255, 235, 59, 0.45);
+        }
+
+        .logo-box {
+            text-align: center;
+            margin-bottom: 18px;
+        }
+
+        .logo-box img {
+            width: 90px;
+            height: 90px;
+            object-fit: contain;
+            border-radius: 16px;
+            background: var(--brand-blue);
+            padding: 8px;
+            box-shadow: 0 8px 18px rgba(250, 204, 21, 0.35);
+        }
+
+        .page-title {
+            text-align: center;
+            font-size: 28px;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+
+        .page-subtitle {
+            text-align: center;
+            color: var(--text-mid);
+            font-size: 14px;
+            margin-bottom: 24px;
+            line-height: 1.6;
+        }
+
+        .top-nav {
+            text-align: center;
+            margin-bottom: 22px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .top-nav a,
+        .footer-links a,
+        .quick-links a {
+            text-decoration: none;
+            color: var(--accent-deep);
+            font-weight: 700;
+        }
+
+        .quick-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 24px;
+            justify-content: center;
+        }
+
+        .chip {
+            display: inline-block;
+            background: #fffef7;
+            border: 1px solid rgba(250, 204, 21, 0.55);
+            border-radius: 999px;
+            padding: 10px 14px;
+            font-size: 13px;
+        }
+
+        .section {
+            margin-bottom: 28px;
+        }
+
+        .section h2 {
+            font-size: 20px;
+            margin-bottom: 12px;
+            color: var(--text-dark);
+        }
+
+        .section h3 {
+            font-size: 17px;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+
+        .section p {
+            color: var(--text-dark);
+            font-size: 15px;
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+
+        .section ul {
+            padding-left: 18px;
+            margin-bottom: 12px;
+        }
+
+        .section li {
+            margin-bottom: 10px;
+            line-height: 1.8;
+            color: var(--text-dark);
+            font-size: 15px;
+        }
+
+        .note-box {
+            background: #fffef7;
+            border: 1px solid rgba(250, 204, 21, 0.55);
+            border-radius: 16px;
+            padding: 16px;
+            margin-bottom: 24px;
+        }
+
+        .footer-links {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 14px;
+            color: var(--text-mid);
+            line-height: 1.8;
+        }
+
+        @media (min-width: 700px) {
+            .page-card {
+                padding: 38px 34px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-wrap">
+        <div class="page-card">
+            <div class="logo-box">
+                <img src="assets/images/movex-logo.jpg" alt="Movex Logo" />
+            </div>
+
+            <h1 class="page-title">Privacy Policy</h1>
+            <p class="page-subtitle">
+                This Privacy Policy explains how Movex collects, uses, manages, stores, and protects personal
+                and operational information across the demo environment <strong>/9ja</strong> and the live
+                environment <strong>/ng</strong>.
+            </p>
+
+            <div class="top-nav">
+                <a href="forms/auth/login.html">Login</a> |
+                <a href="forms/auth/register.html">Register</a> |
+                <a href="terms.html">Terms and Conditions</a>
+            </div>
+
+            <div class="quick-links">
+                <a class="chip" href="#collection">Information We Collect</a>
+                <a class="chip" href="#usage">How We Use Information</a>
+                <a class="chip" href="#categories">User Categories</a>
+                <a class="chip" href="#sharing">Information Sharing</a>
+                <a class="chip" href="#promo">Student Promo</a>
+                <a class="chip" href="#security">Security</a>
+            </div>
+
+            <div class="note-box">
+                <p>
+                    Movex respects user privacy and aims to collect only information reasonably necessary to operate,
+                    secure, improve, verify, and manage logistics services and related user accounts.
+                </p>
+            </div>
+
+            <section class="section" id="collection">
+                <h2>1. Information We Collect</h2>
+                <p>Depending on the account type and service use, Movex may collect:</p>
+                <ul>
+                    <li>Personal information such as name, email address, phone number, sex, address, and state.</li>
+                    <li>Business or company information such as company name, registration details, contact details, and operating data.</li>
+                    <li>Driver-related information such as vehicle type, pool preference, verification details, and operating affiliation details where applicable.</li>
+                    <li>Order-related information such as pickup, drop-off, goods details, pool type, and service preferences.</li>
+                    <li>Verification or approval data required for admin review, compliance, safety, or promotional decisions.</li>
+                </ul>
+            </section>
+
+            <section class="section" id="usage">
+                <h2>2. How We Use Information</h2>
+                <ul>
+                    <li>Create and manage user accounts.</li>
+                    <li>Support logistics requests, operational matching, and service coordination.</li>
+                    <li>Verify users, drivers, businesses, companies, and selected platform relationships.</li>
+                    <li>Manage approvals, promotions, service pools, and compliance checks.</li>
+                    <li>Improve platform safety, support, reporting, and service delivery.</li>
+                    <li>Respond to support issues, disputes, or operational incidents.</li>
+                </ul>
+            </section>
+
+            <section class="section" id="categories">
+                <h2>3. Information by User Category</h2>
+
+                <h3>Individual Customer / Sender</h3>
+                <p>
+                    For customer accounts, Movex may collect registration information, order details, service preferences,
+                    and optional student-promo related documents where submitted.
+                </p>
+
+                <h3>Driver / Rider</h3>
+                <p>
+                    For drivers and riders, Movex may collect registration information, preferred pool, vehicle details,
+                    affiliation information, and later verification or approval documents as required for activation.
+                </p>
+
+                <h3>Business Logistics Partner</h3>
+                <p>
+                    For business partner accounts, Movex may collect business identity data, contact information, service
+                    categories, driver onboarding information, and operational records related to partner activities.
+                </p>
+
+                <h3>Company Needing Services</h3>
+                <p>
+                    For company client accounts, Movex may collect company identity data, contact information, order data,
+                    billing-related information, and authorized-user management information where such features are enabled.
+                </p>
+            </section>
+
+            <section class="section" id="sharing">
+                <h2>4. Information Sharing</h2>
+                <p>
+                    Movex may share information only where reasonably necessary for platform operations, lawful compliance,
+                    order fulfillment, verification, support, insurance processing, commercial operations, or platform safety.
+                </p>
+                <ul>
+                    <li>Information may be shared with operational partners or service providers where necessary for service delivery.</li>
+                    <li>Information may be shared with insurers or verification-related providers where a service requires it.</li>
+                    <li>Information may be disclosed where required by law, regulation, lawful request, or compliance obligation.</li>
+                </ul>
+                <p>
+                    <strong>No mobile information will be shared or sold to third parties for marketing purposes.</strong>
+                </p>
+            </section>
+
+            <section class="section" id="promo">
+                <h2>5. Student Promo and Verification</h2>
+                <p>
+                    Where a user uploads student identification for a possible promotion, the submitted information may be used
+                    only for verification, promo review, and admin decision-making.
+                </p>
+                <ul>
+                    <li>Student-related promo approval is not automatic.</li>
+                    <li>Movex may approve, reject, or request more information before any promo is applied.</li>
+                    <li>Submission of student information does not guarantee a discount or promotional benefit.</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>6. Associations, Motor Garages, and Internal Tagging</h2>
+                <p>
+                    Where Movex manages recognized associations or motor garage relationships, affiliation information may be
+                    stored, reviewed, or assigned internally by admin to support operations, reporting, and commission logic.
+                </p>
+            </section>
+
+            <section class="section" id="security">
+                <h2>7. Data Security and Retention</h2>
+                <ul>
+                    <li>Movex will take reasonable measures to protect stored user information.</li>
+                    <li>Access may be restricted to authorized operational, technical, or administrative roles.</li>
+                    <li>Information may be retained for operational, legal, compliance, audit, support, and service history purposes as reasonably necessary.</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2>8. Cookies, Sessions, and Basic Technical Data</h2>
+                <p>
+                    Movex may use cookies, session controls, and technical information necessary for login, account handling,
+                    performance, and secure platform access.
+                </p>
+            </section>
+
+            <section class="section">
+                <h2>9. Changes to This Policy</h2>
+                <p>
+                    Movex may update this Privacy Policy from time to time. Continued use of the platform after updates means
+                    you accept the revised version.
+                </p>
+            </section>
+
+            <section class="section">
+                <h2>10. Contact</h2>
+                <p>
+                    For privacy, data, support, or compliance questions, users should contact the official Movex support
+                    details that will appear on the live platform.
+                </p>
+            </section>
+
+            <div class="footer-links">
+                <a href="forms/auth/register.html">Back to Registration</a> |
+                <a href="forms/auth/login.html">Back to Login</a> |
+                <a href="terms.html">Terms and Conditions</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

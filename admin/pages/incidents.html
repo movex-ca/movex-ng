@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movex Incident Management</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+    body { background: #f5f7fb; color: #1f2937; }
+    .wrapper { display: flex; min-height: 100vh; }
+    .sidebar {
+      width: 250px; background: #0f172a; color: #fff; padding: 20px;
+    }
+    .sidebar h2 { margin-bottom: 20px; font-size: 22px; }
+    .sidebar ul { list-style: none; }
+    .sidebar li { margin-bottom: 12px; }
+    .sidebar a { color: #cbd5e1; text-decoration: none; display: block; padding: 10px 12px; border-radius: 8px; }
+    .sidebar a:hover, .sidebar a.active { background: #1e293b; color: #fff; }
+
+    .main {
+      flex: 1; padding: 24px;
+    }
+
+    .topbar {
+      display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;
+      background: #fff; padding: 16px 20px; border-radius: 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    .topbar h1 { font-size: 24px; }
+    .btn {
+      border: none; padding: 10px 16px; border-radius: 8px; cursor: pointer; font-weight: bold;
+    }
+    .btn-primary { background: #2563eb; color: #fff; }
+    .btn-warning { background: #f59e0b; color: #fff; }
+    .btn-danger { background: #dc2626; color: #fff; }
+    .btn-success { background: #16a34a; color: #fff; }
+
+    .stats {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px; margin-bottom: 20px;
+    }
+
+    .card {
+      background: #fff; border-radius: 14px; padding: 18px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    .stat-title { color: #6b7280; font-size: 13px; margin-bottom: 8px; }
+    .stat-value { font-size: 26px; font-weight: bold; }
+
+    .filters {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 12px; margin-bottom: 20px;
+    }
+    .filters input, .filters select, .filters textarea {
+      width: 100%; padding: 11px 12px; border: 1px solid #d1d5db; border-radius: 8px; background: #fff;
+    }
+
+    .grid-2 {
+      display: grid; grid-template-columns: 2fr 1fr; gap: 20px;
+    }
+
+    .table-wrap { overflow-x: auto; }
+    table {
+      width: 100%; border-collapse: collapse; margin-top: 10px;
+    }
+    table th, table td {
+      text-align: left; padding: 12px; border-bottom: 1px solid #e5e7eb; font-size: 14px;
+    }
+    table th { background: #f8fafc; }
+
+    .badge {
+      display: inline-block; padding: 6px 10px; border-radius: 999px; font-size: 12px; font-weight: bold;
+    }
+    .badge-open { background: #fee2e2; color: #b91c1c; }
+    .badge-review { background: #fef3c7; color: #92400e; }
+    .badge-resolved { background: #dcfce7; color: #166534; }
+    .badge-high { background: #fde68a; color: #92400e; }
+    .badge-critical { background: #fecaca; color: #991b1b; }
+
+    .incident-box {
+      border: 1px solid #e5e7eb; border-radius: 12px; padding: 14px; margin-bottom: 12px;
+      background: #fafafa;
+    }
+
+    .incident-box h4 { margin-bottom: 6px; font-size: 16px; }
+    .incident-box p { font-size: 13px; color: #4b5563; margin-bottom: 8px; }
+
+    .form-section h3, .table-section h3 {
+      margin-bottom: 12px; font-size: 18px;
+    }
+
+    .form-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px;
+    }
+
+    .textarea-lg {
+      min-height: 100px;
+    }
+
+    .action-row {
+      display: flex; gap: 10px; flex-wrap: wrap; margin-top: 14px;
+    }
+
+    @media (max-width: 900px) {
+      .grid-2 { grid-template-columns: 1fr; }
+      .sidebar { display: none; }
+      .main { padding: 14px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <aside class="sidebar">
+      <h2>Movex Admin</h2>
+      <ul>
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">Orders</a></li>
+        <li><a href="#">Payments</a></li>
+        <li><a href="#">Drivers</a></li>
+        <li><a href="#" class="active">Incidents</a></li>
+        <li><a href="#">Warnings / Strikes</a></li>
+        <li><a href="#">Wallet / Refunds</a></li>
+        <li><a href="#">Reports</a></li>
+      </ul>
+    </aside>
+
+    <main class="main">
+      <div class="topbar">
+        <h1>Incident Management</h1>
+        <button class="btn btn-primary">Create Incident</button>
+      </div>
+
+      <div class="stats">
+        <div class="card">
+          <div class="stat-title">Open Incidents</div>
+          <div class="stat-value">18</div>
+        </div>
+        <div class="card">
+          <div class="stat-title">Under Review</div>
+          <div class="stat-value">7</div>
+        </div>
+        <div class="card">
+          <div class="stat-title">Active Warnings</div>
+          <div class="stat-value">12</div>
+        </div>
+        <div class="card">
+          <div class="stat-title">Active Strikes</div>
+          <div class="stat-value">6</div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-bottom:20px;">
+        <div class="filters">
+          <input type="text" placeholder="Search by incident code, order code, user, driver" />
+          <select>
+            <option>All Categories</option>
+            <option>No Show</option>
+            <option>Fraud</option>
+            <option>Misconduct</option>
+            <option>Damage</option>
+            <option>Safety Issue</option>
+          </select>
+          <select>
+            <option>All Severity</option>
+            <option>Low</option>
+            <option>Medium</option>
+            <option>High</option>
+            <option>Critical</option>
+          </select>
+          <select>
+            <option>All Status</option>
+            <option>Open</option>
+            <option>Under Review</option>
+            <option>Resolved</option>
+            <option>Dismissed</option>
+            <option>Escalated</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <section class="card table-section">
+          <h3>Incident List</h3>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Code</th>
+                  <th>Order</th>
+                  <th>Category</th>
+                  <th>Reporter</th>
+                  <th>Accused</th>
+                  <th>Severity</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>INC-0001</td>
+                  <td>MOV-NG-ORD-2026-0004</td>
+                  <td>No Show</td>
+                  <td>Driver</td>
+                  <td>User</td>
+                  <td><span class="badge badge-high">High</span></td>
+                  <td><span class="badge badge-review">Under Review</span></td>
+                </tr>
+                <tr>
+                  <td>INC-0002</td>
+                  <td>MOV-NG-ORD-2026-0002</td>
+                  <td>Late Arrival</td>
+                  <td>User</td>
+                  <td>Driver</td>
+                  <td><span class="badge">Low</span></td>
+                  <td><span class="badge badge-resolved">Resolved</span></td>
+                </tr>
+                <tr>
+                  <td>INC-0003</td>
+                  <td>MOV-NG-ORD-2026-0005</td>
+                  <td>Misconduct</td>
+                  <td>User</td>
+                  <td>Driver</td>
+                  <td><span class="badge badge-critical">Critical</span></td>
+                  <td><span class="badge badge-open">Open</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="card form-section">
+          <h3>Create / Review Incident</h3>
+          <div class="form-grid">
+            <input type="text" placeholder="Incident Code" />
+            <input type="text" placeholder="Order Code" />
+            <select>
+              <option>Reporter Type</option>
+              <option>User</option>
+              <option>Driver</option>
+              <option>Company</option>
+              <option>Admin</option>
+            </select>
+            <input type="text" placeholder="Reporter ID / Name" />
+            <select>
+              <option>Accused Type</option>
+              <option>User</option>
+              <option>Driver</option>
+              <option>Company</option>
+              <option>Admin</option>
+            </select>
+            <input type="text" placeholder="Accused ID / Name" />
+            <select>
+              <option>Incident Category</option>
+              <option>No Show</option>
+              <option>Fraud</option>
+              <option>Misconduct</option>
+              <option>Damage to Goods</option>
+              <option>Safety Issue</option>
+              <option>Payment Issue</option>
+            </select>
+            <select>
+              <option>Severity</option>
+              <option>Low</option>
+              <option>Medium</option>
+              <option>High</option>
+              <option>Critical</option>
+            </select>
+            <select>
+              <option>Status</option>
+              <option>Open</option>
+              <option>Under Review</option>
+              <option>Resolved</option>
+              <option>Dismissed</option>
+              <option>Escalated</option>
+            </select>
+            <input type="datetime-local" />
+          </div>
+
+          <div style="margin-top:12px;">
+            <input type="text" placeholder="Incident Title" />
+          </div>
+
+          <div style="margin-top:12px;">
+            <textarea class="textarea-lg" placeholder="Describe the incident, allegation, evidence summary, and operational impact"></textarea>
+          </div>
+
+          <div class="action-row">
+            <button class="btn btn-primary">Save Incident</button>
+            <button class="btn btn-warning">Issue Warning</button>
+            <button class="btn btn-danger">Add Strike</button>
+            <button class="btn btn-success">Resolve Incident</button>
+          </div>
+        </section>
+      </div>
+
+      <div class="grid-2" style="margin-top:20px;">
+        <section class="card">
+          <h3>Recent Incident Actions</h3>
+          <div class="incident-box">
+            <h4>INC-0002 — Warning Issued</h4>
+            <p>Driver received warning for repeated late arrival complaints.</p>
+            <small>By Admin • 2026-03-07 10:45</small>
+          </div>
+          <div class="incident-box">
+            <h4>INC-0001 — Note Added</h4>
+            <p>Admin requested location verification and call record review.</p>
+            <small>By Admin • 2026-03-07 10:12</small>
+          </div>
+        </section>
+
+        <section class="card">
+          <h3>Warnings / Strikes Summary</h3>
+          <div class="incident-box">
+            <h4>User #4</h4>
+            <p>Warning: No-show behaviour under review</p>
+            <p>Strike Count: 1</p>
+          </div>
+          <div class="incident-box">
+            <h4>Driver #2</h4>
+            <p>Warning: Late arrival complaint confirmed</p>
+            <p>Strike Count: 1</p>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
