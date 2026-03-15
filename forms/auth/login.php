@@ -36,7 +36,7 @@ require_once __DIR__ . '/../../config/base.php';
 
                 Method: POST
             -->
-            <form action="../../forms/auth/submit/login.php" method="post">
+            <form action="submit/login_submit.php" method="post">
                 <div class="form-grid">
                     <div class="form-group">
                         <label for="login_identity">Email Address or Phone Number</label>

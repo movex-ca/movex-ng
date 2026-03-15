@@ -46,26 +46,26 @@ $role = $user['role_name'] ?? 'user';
 
 switch ($role) {
     case 'user':
-        header('Location: https://movex-org.com/9ja/dashboard/user-dashboard.php');
+        header('Location: ../../dashboard/user-dashboard.php');
         exit;
 
     case 'driver':
-        header('Location: https://movex-org.com/9ja/dashboard/driver-dashboard.php');
+        header('Location: ../../dashboard/driver-dashboard.php');
         exit;
 
     case 'company':
-        header('Location: https://movex-org.com/9ja/dashboard/company-dashboard.php');
+        header('Location: ../../dashboard/company-dashboard.php');
         exit;
 
    case 'business':
-        header('Location: https://movex-org.com/9ja/dashboard/business-dashboard.php');
+        header('Location: ../../dashboard/business-dashboard.php');
         exit;
     case 'admin':
-        header('Location: https://movex-org.com/9ja/dashboad/admin-dashboard.php');
+        header('Location: ../../dashboard/admin-dashboard.php');
         exit;
 
     default:
-        header('Location: https://movex-org.com/9ja/dashboard/user-dashboard.php');
+        header('Location: ../../dashboard/user-dashboard.php');
         exit;
 }
 ?>
