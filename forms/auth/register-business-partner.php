@@ -312,7 +312,7 @@ require_once __DIR__ . '/../../config/base.php';
 
             <p class="bottom-text">
                 Already have an account?
-                <a href="login.html">Login</a>
+                <a href="login.php">Login</a>
             </p>
         </div>
     </div>
