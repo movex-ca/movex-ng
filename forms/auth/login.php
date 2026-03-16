@@ -36,7 +36,7 @@ require_once __DIR__ . '/../../config/base.php';
 
                 Method: POST
             -->
-            <form action="../../forms/auth/submit/login.php" method="post">
+            <form action="../../forms/auth/submit/login_submit.php" method="post">
                 <div class="form-grid">
                     <div class="form-group">
                         <label for="login_identity">Email Address or Phone Number</label>
@@ -96,7 +96,7 @@ require_once __DIR__ . '/../../config/base.php';
                 By continuing, you agree to our
                 <a href="../../terms.html">Terms</a>
                 and
-                <a href="../../privacy.php">Privacy Policy</a>.
+                <a href="../../privacy.html">Privacy Policy</a>.
             </p>
         </div>
     </div>
